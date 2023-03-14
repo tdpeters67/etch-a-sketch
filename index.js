@@ -22,7 +22,10 @@ function changeSize(input){
     if(input >= 2 && input <= 100){
         populateGameContainer(input)
     }
-    else{console.log("Too many squares")}
+    else{
+        let error = document.querySelector('.error')
+        error.textContent = "Please select a size from 2-100"
+    }
 }
 
 function colorSquare(){
