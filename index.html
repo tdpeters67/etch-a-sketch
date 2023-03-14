@@ -10,15 +10,25 @@
 <body>
     <h1>Etch-a-Sketch</h1>
     <div class="header">
+
         <h6>Select the size</h6>
-        <button id="popup">Select</button>
+        <input 
+            type="text" 
+            placeholder="Size of Board" 
+            value="16" 
+            onchange="changeSize(this.value)"
+            />
+            <button>Set Size</button>
 
     </div>
     <div class="gameContainer"></div>
     <div class="footer">
-        <button>Black</button>
-        <button>Random</button>
-        <button>Reset</button>
+        <button onclick="changeColor('black')">Black</button>
+        <button onclick="changeColor('white')">Eraser</button>
+        <button onclick="changeColor('grey')">Grey</button>
+        <button onclick="changeColor('random')">Random</button>
+
+        <button onclick="resetBoard()">Reset</button>
 
     </div>
 
